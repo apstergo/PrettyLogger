@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "AndroidTools"
+rootProject.name = "PrettyLoggerLib"
 include ':sample'
 include ':PrettyLogger'
