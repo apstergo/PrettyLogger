@@ -1,9 +1,10 @@
 # PrettyLogger
 PrettyLogger – удобный логгер для okhttp и retrofit.
 <br/>
+<br/>
 PrettyLogger is a handy logger for okhttp and retrofit.
 <br/>
-#Как подключить/How to use#
+# Как подключить/How to use #
 ```
 allprojects {
 	repositories {
@@ -18,7 +19,7 @@ dependencies {
         implementation 'com.github.apstergo:PrettyLogger:1.0.0'
 }
 ```
-#Пример использования/Sample#
+# Пример использования/Sample #
 
 ```
 val okHttpClient = okHttpClientBuilder
