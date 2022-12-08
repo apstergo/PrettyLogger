@@ -1,7 +1,23 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id("maven-publish")
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId group
+                artifactId "prettylogger"
+                version version
+            }
+        }
+    }
+}
+
+group = "ru.profsoft.prettylogger"
+version = "1.0.0"
 
 android {
     namespace 'ru.profsoft.prettylogger'
@@ -46,4 +62,15 @@ dependencies {
 
     // Timber Logging
     implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    def ktor_version = '2.0.3'
+    implementation "io.ktor:ktor-client-core:$ktor_version"
+    implementation "io.ktor:ktor-client-android:$ktor_version"
+    implementation "io.ktor:ktor-client-serialization:$ktor_version"
+    implementation "io.ktor:ktor-client-logging:$ktor_version"
+    implementation "io.ktor:ktor-client-auth:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3'
+    implementation "io.ktor:ktor-client-content-negotiation:$ktor_version"
+    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktor_version"
 }
