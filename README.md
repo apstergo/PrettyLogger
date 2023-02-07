@@ -16,7 +16,7 @@ allprojects {
 }
 
 dependencies {
-        implementation 'com.github.apstergo:PrettyLogger:1.0.1'
+        implementation 'com.github.apstergo:PrettyLogger:1.0.'
 }
 ```
 # Пример использования/Sample #
