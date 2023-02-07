@@ -4,21 +4,6 @@ plugins {
     id("maven-publish")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId group
-                artifactId "prettylogger"
-                version version
-            }
-        }
-    }
-}
-
-group = "ru.profsoft.prettylogger"
-version = "1.0.0"
-
 android {
     namespace 'ru.profsoft.prettylogger'
     compileSdk 32
